@@ -1,0 +1,8 @@
+outputs/
+wandb/
+.git/
+.gitignore
+.vscode/
+.DS_Store
+._*
+.Trash

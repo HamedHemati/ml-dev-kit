@@ -1,0 +1,12 @@
+device: "mps"
+num_workers: 0
+log: False
+wandb_project: my_project
+seed: 0
+val_interval: 10
+num_epochs: 1
+
+defaults:
+  - _self_
+  - algorithm: supervised_classification
+  - dataset: dummy

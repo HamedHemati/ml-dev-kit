@@ -1,0 +1,10 @@
+# @package _global_
+
+algorithm: supervised_classification
+
+# Model
+model: mlp
+
+# Training parameters
+batch_size: 16
+lr: 0.01
