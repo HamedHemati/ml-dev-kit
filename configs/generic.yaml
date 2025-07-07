@@ -2,7 +2,9 @@ device: "mps"
 num_workers: 0
 log: False
 wandb_project: my_project
-seed: 0
+
+random_seed: 0
+random_seed_data: 123
 val_interval: 10
 num_epochs: 1
 

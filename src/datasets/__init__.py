@@ -4,13 +4,19 @@ from .dummy_ds import DummyDataset
 def get_dataset(config):
     if config["dataset"] == "dummy":
         train_set = DummyDataset(
-            n_samples=config["n_train_samples"], **config["dataset_params"]
+            n_samples=config["n_train_samples"],
+            random_seed=config["random_seed_data"],
+            **config["dataset_params"],
         )
         val_set = DummyDataset(
-            n_samples=config["n_val_samples"], **config["dataset_params"]
+            n_samples=config["n_val_samples"],
+            random_seed=config["random_seed_data"],
+            **config["dataset_params"],
         )
         test_set = DummyDataset(
-            n_samples=config["n_test_samples"], **config["dataset_params"]
+            n_samples=config["n_test_samples"],
+            random_seed=config["random_seed_data"],
+            **config["dataset_params"],
         )
 
         print(f"Loaded Dummy dataset ...")

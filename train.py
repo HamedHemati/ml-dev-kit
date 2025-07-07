@@ -3,11 +3,9 @@ import os
 import hydra
 from omegaconf import OmegaConf, DictConfig
 
-sys.path.append(os.path.join(os.path.dirname(__file__), "src"))
-
-from my_cls.datasets import get_dataset
-from my_cls.utils.generic import initialize_experiment, finalize_experiment
-from my_cls.algorithms import get_algorithm
+from src.datasets import get_dataset
+from src.utils.generic import initialize_run, finalize_run
+from src.algorithms import get_algorithm
 
 
 @hydra.main(config_path="configs", config_name="generic", version_base="1.3.2")
@@ -16,7 +14,7 @@ def main(config: DictConfig) -> None:
     config = OmegaConf.to_container(config, resolve=True)
 
     # Initialize experiment
-    initialize_experiment(config)
+    initialize_run(config)
 
     # Intialize algorithm and dataset
     algorithm = get_algorithm(config)
@@ -32,7 +30,7 @@ def main(config: DictConfig) -> None:
     algorithm.test(test_set)
 
     # Finalize experiment
-    finalize_experiment(algorithm)
+    finalize_run(algorithm)
 
 
 if __name__ == "__main__":
