@@ -14,12 +14,11 @@ ml-dev-kit/
 ├── notebooks/             # Jupyter notebooks
 ├── outputs/               # Experiment outputs 
 ├── scripts/               # Utility scripts
-├── src/                   # Source code
-│   └── my_cls/            # Core packge: To be modified
-│       ├── algorithms/    # Training algorithms
-│       ├── datasets/      # Dataset implementations
-│       ├── models/        # Models architectures
-│       └── utils/         # Utility functions
+├── src/                   # Source code: core package
+│   ├── algorithms/        # Training algorithms
+│   ├── datasets/          # Dataset implementations
+│   ├── models/            # Models architectures
+│   └── utils/             # Utility functions
 ├── train.py               # Main training script
 └── requirements.txt       # Python dependencies
 ```
